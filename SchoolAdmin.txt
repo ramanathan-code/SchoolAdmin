@@ -1,0 +1,40 @@
+1. StudentService
+http://localhost:9001/api/students
+http://localhost:9001/api/students/{}
+
+2. TeacherService
+http://localhost:9002/api/teachers
+http://localhost:9003/api/teachers/{}
+
+3. API Gateway
+
+
+4. Config Server
+
+
+5. Service Registry & Discovery
+
+
+6. Distributed Logging and Tracing
+
+
+7. Circuit Breaker
+
+
+8. 
+
+Test Data
+=========
+
+{
+  "email" : "studentjane@gmail.com"
+  "name" : "Jane"
+}
+
+
+{
+  "email" : "teachermary@gmail.com"
+  "name" : "Mary"
+}
+
+
