@@ -1,10 +1,12 @@
 package com.schooladmin.teacher.entity;
 
+import com.schooladmin.teacher.dto.Student;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -23,5 +25,6 @@ public class Teacher {
     @Column(name="name")
     private String name;
 
-    //List<Student> students;
+	@OneToMany(mappedBy = "student")
+	private List<Student> students;
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/aoi/teachers")
+@RequestMapping("/api")
 @Slf4j
 public class TeacherController {
 
@@ -16,15 +16,23 @@ public class TeacherController {
     private TeacherService teacherService;
 
     @PostMapping
-    @RequestMapping("/")
+    @RequestMapping("/teachers")
     public Teacher saveTeacher(@RequestBody Teacher teacher) {
         log.info("Inside the saveTeacher of TeacherController");
         return teacherService.saveTeacher(teacher);
     }
 
     @GetMapping
-    @RequestMapping("/{email}")
-    public Teacher findTeacherByEmail(@PathVariable("email") String email) {
+    @RequestMapping("/teachers/{email}")
+    public Teacher registerindTeacherByEmail(@PathVariable("email") String email) {
         return teacherService.findTeacherByEmail(email);
     }
+
+    @GetMapping
+    @RequestMapping("/register")
+    public Teacher registerStudent(@RequestBody StudentRegisterDto  studentRegisterDto) {
+
+        return teacherService.findTeacherByEmail(email);
+    }
+
 }

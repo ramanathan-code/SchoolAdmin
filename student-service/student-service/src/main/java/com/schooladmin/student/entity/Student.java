@@ -23,5 +23,8 @@ public class Student {
     private String email;
 
     private String name;
+	
+	@ManyToOne
+	private Teacher teacher;
 
 }
